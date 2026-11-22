@@ -6,7 +6,7 @@ from flask import Flask, jsonify, request, send_from_directory
 HERE = os.path.dirname(os.path.abspath(__file__))
 DET = os.path.join(HERE, "models", "yunet.onnx")
 REC = os.path.join(HERE, "models", "sface.onnx")
-MATCH_THRESHOLD = 0.30  # SFace cosine threshold recommended by OpenCV
+MATCH_THRESHOLD = 0.30 # SFace cosine threshold recommended by OpenCV
 MAX_SIDE = 1920           # downscale huge photos for speed
 
 app = Flask(__name__, static_folder="static")
